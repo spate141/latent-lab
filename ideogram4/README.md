@@ -186,21 +186,6 @@ All subsequent runs load from disk; no internet connection needed.
 
 ---
 
-## Current status
-
-| Item | Status |
-|------|--------|
-| venv created | ✅ `.venv/` exists |
-| torch+CUDA installed | ✅ 2.12.0+cu130, CUDA available |
-| ideogram4 package | ✅ installed (editable) |
-| ipywidgets + jupyter | ⬇ `pip install jupyter ipywidgets ipykernel` |
-| venv registered as kernel | ⬇ `python -m ipykernel install --user --name ideogram4-venv --display-name "Python (ideogram4)"` |
-| HF token | ✅ done: cached at `~/.cache/huggingface/token` (user: spate141). On a fresh machine: `hf auth login` |
-| HF model gate accepted | ⚠️ still need to visit the links in Step 6 and click Accept |
-| Model weights downloaded | ⬇ happens on first pipeline load |
-
----
-
 ## Troubleshooting
 
 ### CUDA not found in WSL2
