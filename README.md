@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="latent-lab logo" width="200" />
+</p>
+
 # latent-lab
 Hands-on Jupyter notebooks for running open-weight models locally. One model, one notebook, one GPU.
 
