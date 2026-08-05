@@ -150,9 +150,27 @@ the cached files.
 5. Click **Analyze locally** on the **Refusal detection** widget and notice that a high `yes`
    score means the refusal policy matched—it does not mean the response was unsafe.
 6. Upload a local image in the **Image policy** widget, then click **Analyze locally**.
-7. Run the policy matrix.
-8. Move the threshold slider without rerunning inference.
-9. Refresh the performance summary.
+7. Run the **Static Example Results** cell so its output is saved into the notebook (see
+   [Viewing on GitHub](#viewing-on-github) below).
+8. Run the policy matrix.
+9. Move the threshold slider without rerunning inference.
+10. Refresh the performance summary.
+
+## Viewing on GitHub
+
+GitHub's notebook viewer has no live kernel, so it can't run widget JavaScript, and it only
+understands the older ipywidgets 7.x widget-state format—not the 8.x format this notebook's
+`ipywidgets` dependency produces. Because of that, the three example widgets and the
+preset playground **always** render as inert `VBox(children=(...))` text on GitHub, regardless
+of whether you enabled JupyterLab's "Save Widget State Automatically" setting.
+
+The **Static Example Results** cell works around this: it calls `evaluate_policy()` directly for
+the Policy wording and Refusal detection examples and `display()`s the result as plain HTML
+outside of any `ipywidgets.Output`, so the result is stored as a normal notebook output that
+GitHub renders correctly. Re-run that cell (as part of a full top-to-bottom run) before committing
+so its output reflects the current model and presets. The Image policy example has no fixed
+output to freeze this way, since it depends on a runtime-uploaded image—use its interactive
+widget in a live kernel (JupyterLab or Binder) to see it.
 
 ## Troubleshooting
 
