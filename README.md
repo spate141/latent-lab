@@ -8,6 +8,7 @@ Hands-on Jupyter notebooks for running open-weight models locally. One model, on
 # Currently available notebooks:
 - [ideogram4](ideogram4/ideogram4_playground.ipynb): image generation with Ideogram 4
 - [kokoro](kokoro/generate_audio.ipynb): text-to-speech with Kokoro-82M
+- [shieldstral](shieldstral/shieldstral_policy_lab.ipynb): policy-adaptive text and image moderation with Shieldstral 1.0 3B
 
 # Model license note
 > The notebook code in this repo is released under the MIT License.
